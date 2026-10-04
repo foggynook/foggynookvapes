@@ -1,7 +1,95 @@
 @import "tailwindcss";
-@config "../../tailwind.config.ts";
 @plugin "tailwindcss-animate";
 
+/* ─── Custom Design Tokens (Tailwind v4 @theme) ──────────────────────────── */
+@theme {
+  /* Colors */
+  --color-black: #0b0b0b;
+  --color-black-soft: #111111;
+
+  --color-gold: #d4af37;
+  --color-gold-light: #f5d76e;
+
+  --color-gray-muted: #9e9e9e;
+
+  --color-border: rgba(212, 175, 55, 0.15);
+  --color-background: #0b0b0b;
+  --color-foreground: #ffffff;
+  --color-card: #111111;
+  --color-input: rgba(255, 255, 255, 0.05);
+  --color-ring: #d4af37;
+
+  /* Fonts */
+  --font-display: var(--font-cormorant), serif;
+  --font-body: var(--font-manrope), sans-serif;
+
+  /* Border radius */
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+
+  /* Shadows */
+  --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.25);
+  --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.5);
+
+  /* Background images */
+  --background-image-gold-gradient: linear-gradient(
+    135deg,
+    #d4af37 0%,
+    #f5d76e 50%,
+    #d4af37 100%
+  );
+  --background-image-glass: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+
+  /* Container */
+  --container-center: true;
+  --container-padding: 1.5rem;
+
+  /* Keyframes */
+  --animate-smoke: smoke 6s ease-in-out infinite;
+  --animate-shimmer: shimmer 2.5s linear infinite;
+  --animate-fade-up: fade-up 0.7s ease-out forwards;
+
+  @keyframes smoke {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.15;
+    }
+    100% {
+      transform: translateY(-120px) scale(1.8);
+      opacity: 0;
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ─── Base styles ─────────────────────────────────────────────────────────── */
 :root {
   --font-cormorant: "Cormorant Garamond", serif;
   --font-manrope: "Manrope", sans-serif;
@@ -33,34 +121,51 @@ body {
   border-radius: 8px;
 }
 
+/* ─── Component utilities ─────────────────────────────────────────────────── */
 @layer components {
-  /* Reusable glassmorphism card */
   .glass-card {
-    @apply bg-glass backdrop-blur-xl border border-gold/15 rounded-2xl;
+    @apply backdrop-blur-xl rounded-2xl border;
+    background-image: var(--background-image-glass);
+    border-color: var(--color-border);
   }
 
-  /* Gold outline hover effect used across buttons/cards */
   .gold-hover {
-    @apply transition-all duration-300 hover:border-gold hover:shadow-gold;
+    @apply transition-all duration-300 hover:shadow-gold;
+    --tw-hover-border-color: var(--color-gold);
   }
 
-  /* Section heading treatment — luxury serif with gold eyebrow */
   .section-eyebrow {
-    @apply font-body text-xs uppercase tracking-[0.3em] text-gold mb-3;
+    @apply text-xs uppercase tracking-[0.3em] mb-3;
+    font-family: var(--font-body);
+    color: var(--color-gold);
   }
 
   .section-title {
-    @apply font-display text-4xl md:text-5xl font-medium text-white;
+    @apply text-4xl md:text-5xl font-medium text-white;
+    font-family: var(--font-display);
   }
 
   .btn-gold {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-gradient bg-[length:200%_100%]
-      text-black font-semibold px-8 py-3.5 transition-all duration-500 hover:bg-right hover:shadow-gold;
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+      text-black font-semibold px-8 py-3.5 transition-all duration-500;
+    background-image: var(--background-image-gold-gradient);
+    background-size: 200% 100%;
+  }
+  .btn-gold:hover {
+    background-position: right center;
+    box-shadow: var(--shadow-gold);
   }
 
   .btn-outline-gold {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-gold/40 text-gold
-      font-semibold px-8 py-3.5 transition-all duration-300 hover:bg-gold hover:text-black hover:shadow-gold;
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+      font-semibold px-8 py-3.5 transition-all duration-300;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: var(--color-gold);
+  }
+  .btn-outline-gold:hover {
+    background-color: var(--color-gold);
+    color: #000;
+    box-shadow: var(--shadow-gold);
   }
 }
 
@@ -70,6 +175,7 @@ body {
   }
 }
 
+/* ─── Print styles ────────────────────────────────────────────────────────── */
 @media print {
   .no-print {
     display: none !important;
