@@ -6,7 +6,7 @@ import { formatPrice } from "@/lib/utils";
 import { Package, Eye } from "lucide-react";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "My Orders" };
+export const metadata: Metadata = { title: "My Orders", description: "Track and review all your Foggy Nook orders. View order status, details, and history in one place." };
 
 export default async function MyOrdersPage() {
   const supabase = await createClient();

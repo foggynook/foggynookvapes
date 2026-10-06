@@ -4,7 +4,7 @@ import { Search as SearchIcon } from "lucide-react";
 import type { Product } from "@/types";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Search Products" };
+export const metadata: Metadata = { title: "Search Products", description: "Search Foggy Nook's full collection of premium vape kits, e-liquids, disposables, and smoking accessories." };
 
 export default async function SearchPage({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
   const supabase = await createClient();

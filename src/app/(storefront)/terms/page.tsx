@@ -1,7 +1,7 @@
 import LegalLayout from "@/components/layout/LegalLayout";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Terms & Conditions" };
+export const metadata: Metadata = { title: "Terms & Conditions", description: "Read Foggy Nook's terms and conditions covering orders, payments, delivery, and use of our store." };
 
 export default function TermsPage() {
   return (

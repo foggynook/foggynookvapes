@@ -1,7 +1,7 @@
 import LegalLayout from "@/components/layout/LegalLayout";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Return Policy" };
+export const metadata: Metadata = { title: "Return Policy", description: "Foggy Nook's hassle-free return and exchange policy. Know your rights before and after your purchase." };
 
 export default function ReturnPolicyPage() {
   return (

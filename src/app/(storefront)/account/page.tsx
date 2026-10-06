@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import CustomerProfileForm from "@/components/account/CustomerProfileForm";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "My Profile" };
+export const metadata: Metadata = { title: "My Profile", description: "Manage your Foggy Nook account — update your personal details, address, and preferences." };
 
 export default async function AccountProfilePage() {
   const supabase = await createClient();

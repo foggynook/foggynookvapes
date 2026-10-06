@@ -6,7 +6,7 @@ import Link from "next/link";
 import type { Product } from "@/types";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "My Wishlist" };
+export const metadata: Metadata = { title: "My Wishlist", description: "View and manage your saved products on Foggy Nook. Pick up where you left off and add your favourites to cart." };
 
 export default async function WishlistPage() {
   const supabase = await createClient();

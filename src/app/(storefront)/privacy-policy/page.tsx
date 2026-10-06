@@ -1,7 +1,7 @@
 import LegalLayout from "@/components/layout/LegalLayout";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Privacy Policy" };
+export const metadata: Metadata = { title: "Privacy Policy", description: "Learn how Foggy Nook collects, uses, and protects your personal information when you shop with us." };
 
 export default function PrivacyPolicyPage() {
   return (
