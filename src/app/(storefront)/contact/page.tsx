@@ -62,15 +62,26 @@ export default async function ContactPage() {
             <Mail className="text-gold shrink-0 mt-1" size={20} />
             <div>
               <p className="text-white font-medium mb-1">Email</p>
-              <p className="text-gray-muted text-sm">{settings?.store_email || "hello@foggynook.com"}</p>
+              <a href="mailto:foggynookvape@gmail.com" className="text-gray-muted text-sm hover:text-gold transition-colors">
+                {settings?.store_email || "foggynookvape@gmail.com"}
+              </a>
             </div>
           </div>
 
           <div className="glass-card p-6 flex items-start gap-4">
             <Phone className="text-gold shrink-0 mt-1" size={20} />
             <div>
-              <p className="text-white font-medium mb-1">Phone</p>
-              <p className="text-gray-muted text-sm">{settings?.store_phone || "+92 300 1234567"}</p>
+              <p className="text-white font-medium mb-3">Phone</p>
+              <div className="space-y-2">
+                <div>
+                  <p className="text-white/60 text-xs mb-0.5">CEO Rao Muneeb Ashraf · <span className="text-gold">Journalist</span></p>
+                  <a href="tel:+923202465052" className="text-gray-muted text-sm hover:text-gold transition-colors">+92 320-2465052</a>
+                </div>
+                <div>
+                  <p className="text-white/60 text-xs mb-0.5">CEO Rao Kamran Thakkar</p>
+                  <a href="tel:+923015336490" className="text-gray-muted text-sm hover:text-gold transition-colors">+92 301-5336490</a>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -98,7 +109,7 @@ export default async function ContactPage() {
           <div className="rounded-2xl overflow-hidden border border-gold/15 h-64">
             <iframe
               title="store-location"
-              src={settings?.google_map_embed_url || "https://www.google.com/maps?q=Karachi,Pakistan&z=13&output=embed"}
+              src={settings?.google_map_embed_url || "https://www.google.com/maps?q=Vehari+Faisal+Town,Vehari,Pakistan&z=15&output=embed"}
               width="100%"
               height="100%"
               loading="lazy"

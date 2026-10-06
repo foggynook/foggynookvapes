@@ -48,6 +48,7 @@
   /* Container */
   --container-center: true;
   --container-padding: 1.5rem;
+  --container-max-width-2xl: 1400px;
 
   /* Keyframes */
   --animate-smoke: smoke 6s ease-in-out infinite;
@@ -93,6 +94,13 @@
 :root {
   --font-cormorant: "Cormorant Garamond", serif;
   --font-manrope: "Manrope", sans-serif;
+}
+
+/* Cap container at 1400px — matches original tailwind.config.ts screens["2xl"] */
+.container {
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
 }
 
 * {

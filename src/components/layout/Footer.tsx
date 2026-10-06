@@ -9,7 +9,7 @@ export default function Footer({ settings }: { settings?: Partial<SiteSettings> 
   const whatsappNumber2 = settings?.whatsapp_number_2;
   const mapSrc =
     settings?.google_map_embed_url ||
-    "https://www.google.com/maps?q=Karachi,Pakistan&z=13&output=embed";
+    "https://www.google.com/maps?q=Vehari+Faisal+Town,Vehari,Pakistan&z=15&output=embed";
 
   return (
     <footer className="bg-black-soft border-t border-gold/15 mt-24">
