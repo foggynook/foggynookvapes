@@ -13,8 +13,8 @@ interface HeroSlide {
   cta_link: string;
 }
 
-// Image should be in: public/images/hero.jpg
-const DEFAULT_HERO_IMAGE = "/vape.jpg";
+const DEFAULT_HERO_IMAGE = "/hero-3-optimized.webp";
+const DEFAULT_HERO_IMAGE_MOBILE = "/mobile-hero-img-optimized.webp";
 
 export default function Hero({ slides }: { slides?: HeroSlide[] }) {
   const hasSlides = slides && slides.length > 0;
@@ -32,6 +32,7 @@ export default function Hero({ slides }: { slides?: HeroSlide[] }) {
 
   const slide = hasSlides ? slides![active] : null;
   const backgroundImage = slide?.image || DEFAULT_HERO_IMAGE;
+  const backgroundImageMobile = slide?.image || DEFAULT_HERO_IMAGE_MOBILE;
 
   return (
     <section className="relative flex h-[92vh] min-h-[650px] items-center justify-center overflow-hidden bg-black">
@@ -45,12 +46,21 @@ export default function Hero({ slides }: { slides?: HeroSlide[] }) {
           transition={{ duration: 0.8 }}
           className="absolute inset-0"
         >
+          {/* Mobile image (hidden on md and above) */}
+          <Image
+            src={backgroundImageMobile}
+            alt={slide?.title || "Foggy Nook"}
+            fill
+            priority
+            className="object-cover md:hidden"
+          />
+          {/* Desktop image (hidden below md) */}
           <Image
             src={backgroundImage}
             alt={slide?.title || "Foggy Nook"}
             fill
             priority
-            className="object-cover"
+            className="object-cover hidden md:block"
           />
         </motion.div>
       </AnimatePresence>

@@ -65,13 +65,28 @@ export default function Footer({ settings }: { settings?: Partial<SiteSettings> 
         <div>
           <h4 className="text-gold text-xs uppercase tracking-[0.25em] mb-5">Get in Touch</h4>
           <ul className="space-y-3 text-sm text-gray-muted">
-            <li className="flex items-center gap-2"><MapPin size={16} className="text-gold shrink-0" /> {settings?.store_address || "Karachi, Pakistan"}</li>
-            <li className="flex items-center gap-2"><Phone size={16} className="text-gold shrink-0" /> {settings?.store_phone || "+92 300 1234567"}</li>
-            <li className="flex items-center gap-2"><Mail size={16} className="text-gold shrink-0" /> {settings?.store_email || "hello@foggynook.com"}</li>
+            <li className="flex items-start gap-2">
+              <MapPin size={16} className="text-gold shrink-0 mt-0.5" />
+              <span>Vehari Faisal Town</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Phone size={16} className="text-gold shrink-0 mt-0.5" />
+              <span className="space-y-1">
+                <span className="flex flex-col">
+                  <span className="text-white/60 text-xs">CEO Rao Muneeb Ashraf · <span className="text-gold">Journalist</span></span>
+                  <a href="tel:+923202465052" className="hover:text-gold transition-colors">+92 320-2465052</a>
+                </span>
+                <span className="flex flex-col">
+                  <span className="text-white/60 text-xs">CEO Rao Kamran Thakkar</span>
+                  <a href="tel:+923015336490" className="hover:text-gold transition-colors">+92 301-5336490</a>
+                </span>
+              </span>
+            </li>
+            <li className="flex items-center gap-2"><Mail size={16} className="text-gold shrink-0" /> {settings?.store_email || "foggynookvape@gmail.com"}</li>
             <li className="flex items-center gap-2">
               <WhatsAppIcon size={16} className="text-gold shrink-0" />
-              <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="hover:text-gold">
-                {settings?.whatsapp_label || "Sales"}: +{whatsappNumber}
+              <a href="https://wa.me/923015336490" target="_blank" rel="noopener noreferrer" className="hover:text-gold">
+                {settings?.whatsapp_label || "Sales"}: +92 301-5336490
               </a>
             </li>
             {whatsappNumber2 && (
@@ -82,6 +97,7 @@ export default function Footer({ settings }: { settings?: Partial<SiteSettings> 
                 </a>
               </li>
             )}
+
           </ul>
           <div className="mt-5 rounded-xl overflow-hidden border border-gold/15 h-32">
             <iframe

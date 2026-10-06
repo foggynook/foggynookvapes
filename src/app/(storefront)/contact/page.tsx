@@ -27,8 +27,25 @@ export default async function ContactPage() {
           <div className="glass-card p-6 flex items-start gap-4">
             <MapPin className="text-gold shrink-0 mt-1" size={20} />
             <div>
-              <p className="text-white font-medium mb-1">Store Address</p>
-              <p className="text-gray-muted text-sm">{settings?.store_address || "Karachi, Pakistan"}</p>
+              <p className="text-white font-medium mb-3">Our Outlets</p>
+              <div className="space-y-3">
+                <div>
+                  <p className="text-gold text-xs uppercase tracking-wider mb-0.5">1st Outlet</p>
+                  <p className="text-gray-muted text-sm">Vehari Faisal Town</p>
+                </div>
+                <div>
+                  <p className="text-gold text-xs uppercase tracking-wider mb-0.5">2nd Outlet</p>
+                  <p className="text-gray-muted text-sm">Lahore</p>
+                </div>
+                <div>
+                  <p className="text-gold text-xs uppercase tracking-wider mb-0.5">3rd Outlet</p>
+                  <p className="text-gray-muted text-sm">9/11 Wb Vehari</p>
+                </div>
+                <div>
+                  <p className="text-gold text-xs uppercase tracking-wider mb-0.5">4th Outlet</p>
+                  <p className="text-gray-muted text-sm">Satellite Town Lahore</p>
+                </div>
+              </div>
             </div>
           </div>
 
