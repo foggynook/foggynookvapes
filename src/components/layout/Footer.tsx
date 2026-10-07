@@ -21,6 +21,9 @@ export default function Footer({ settings }: { settings?: Partial<SiteSettings> 
           <p className="text-gray-muted text-sm leading-relaxed mb-6">
             Curated premium smoke &amp; vape collections. Discreet packaging, authentic brands, cash on delivery.
           </p>
+          <div className="relative h-24 w-24 mb-6">
+            <Image src="/website_qr_code.png" alt="Foggy Nook QR Code" fill className="object-contain" />
+          </div>
           <div className="flex gap-4">
             <a href={settings?.social_links?.instagram || "#"} target="_blank" rel="noopener noreferrer" className="text-gray-muted hover:text-gold transition-colors" aria-label="Instagram">
               <Instagram size={18} />
