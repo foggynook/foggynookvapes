@@ -22,7 +22,7 @@ export default async function CheckoutSuccessPage({ searchParams }: { searchPara
           <Package size={16} /> Track My Order
         </Link>
         <a
-          href={`https://wa.me/923001234567?text=${encodeURIComponent(`Hello, I want an update on my order #${orderNumber}.`)}`}
+          href={`https://wa.me/923015336490?text=${encodeURIComponent(`Hello, I want an update on my order #${orderNumber}.`)}`}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-gold"

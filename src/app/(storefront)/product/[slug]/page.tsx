@@ -34,7 +34,7 @@ async function getProduct(slug: string) {
     product: product as Product,
     reviews: (reviews as Review[]) || [],
     related: (related as Product[]) || [],
-    whatsappNumber: settings?.whatsapp_number || "923001234567",
+    whatsappNumber: settings?.whatsapp_number || "923015336490",
   };
 }
 

@@ -5,7 +5,7 @@ import WhatsAppIcon from "./WhatsAppIcon";
 import type { SiteSettings } from "@/types";
 
 export default function Footer({ settings }: { settings?: Partial<SiteSettings> | null }) {
-  const whatsappNumber = settings?.whatsapp_number || "923001234567";
+  const whatsappNumber = settings?.whatsapp_number || "923015336490";
   const whatsappNumber2 = settings?.whatsapp_number_2;
   const mapSrc =
     settings?.google_map_embed_url ||

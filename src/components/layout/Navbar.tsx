@@ -21,7 +21,7 @@ export default function Navbar({ settings }: { settings?: Partial<SiteSettings> 
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const cartCount = useCartStore((s) => s.items.reduce((n, i) => n + i.quantity, 0));
-  const whatsappNumber = settings?.whatsapp_number || "923001234567";
+  const whatsappNumber = settings?.whatsapp_number || "923015336490";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);

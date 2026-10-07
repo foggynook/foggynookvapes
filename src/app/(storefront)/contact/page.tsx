@@ -87,7 +87,7 @@ export default async function ContactPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href={`https://wa.me/${settings?.whatsapp_number || "923001234567"}?text=Hello%2C%20I%20want%20to%20know%20about%20your%20products`}
+              href={`https://wa.me/${settings?.whatsapp_number || "923015336490"}?text=Hello%2C%20I%20want%20to%20know%20about%20your%20products`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold flex-1"

@@ -93,7 +93,7 @@ export default async function CustomerOrderDetailPage({ params }: { params: Prom
       </div>
 
       <a
-        href={`https://wa.me/923001234567?text=${encodeURIComponent(`Hello, I have a question about order ${order.order_number}.`)}`}
+        href={`https://wa.me/923015336490?text=${encodeURIComponent(`Hello, I have a question about order ${order.order_number}.`)}`}
         target="_blank"
         rel="noopener noreferrer"
         className="btn-outline-gold inline-flex"

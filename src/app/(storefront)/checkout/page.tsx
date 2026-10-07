@@ -143,7 +143,7 @@ export default function CheckoutPage() {
           </div>
 
           <a
-            href="https://wa.me/923001234567?text=Hello%2C%20I%20have%20a%20question%20about%20my%20order"
+            href="https://wa.me/923015336490?text=Hello%2C%20I%20have%20a%20question%20about%20my%20order"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 flex items-center justify-center gap-2 text-sm text-gray-muted hover:text-gold"

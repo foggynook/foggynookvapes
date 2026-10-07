@@ -19,7 +19,7 @@ export default function WhatsAppButton({
   label2 = "Support",
   message = "Hello, I want to know about your products.",
 }: Props) {
-  const primaryNumber = number || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "923001234567";
+  const primaryNumber = number || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "923015336490";
   const hasSecondNumber = !!number2;
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
